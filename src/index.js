@@ -1,12 +1,13 @@
 import React from 'react';
-import ReactDom from 'react-dom';
+import ReactDOM from 'react-dom';
 import './index.css';
+import App from './App';
+import * as serviceWorker from './serviceWorker';
 
-function Body(){
-  return (
-    <div>
-      <h1>Hello World</h1>
-    </div>
-  )
-}
-ReactDom.render(<Body></Body>,document.getElementById('root'));
+ReactDOM.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+  document.getElementById('root')
+);
+serviceWorker.unregister();
